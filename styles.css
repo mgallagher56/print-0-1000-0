@@ -1,0 +1,90 @@
+.normal {
+    width:1430px;
+    height: 100%;
+    font-size: 13px;
+    background-image: url("greek-vase.png");
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.skiingbg {
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+#button {
+    float: left;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #52D08E;
+    border: 2px black solid;
+    text-decoration: blink;
+    text-decoration: blink;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes blinker {
+    from {background-color: #52D08E}
+    to {background-color: whitesmoke}
+}
+
+#button:hover {
+    height: 60px;
+    background-color: whitesmoke;
+    color: #52D08E;
+
+}
+
+.layer {
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.skiing {
+    background-image: url("snow.png");
+    width: 1430px;
+    font-size: 13px;
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.hidden {
+    display: none;
+}
+
+.skier {
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    transform: rotate(60deg);
+}
+
+.skierSwitch {
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    transform: rotate(-60deg) scaleX(-1);
+}
+
+.skier2 {
+    display: block;
+    position: absolute;
+    height: 500px;
+    width: 750px;
+    transform: rotate(60deg);
+    top: 5480px;
+    left: 0;
+}
