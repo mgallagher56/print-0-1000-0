@@ -13,7 +13,7 @@
 <body class="normal">
 <audio id="audio" src="marioStart.mp3" ></audio>
 <audio id="race" src="race.mp3" ></audio>
-<audio loop id="cheer" src="cheer.mp3" ></audio>
+<audio loop id="cheer" src="cheer.m4a" ></audio>
 
 
 <div class="overlay">
@@ -104,7 +104,6 @@ foreach ($newArray as $items){
     }
     echo '<br>';
 }
-
 ?>
     </div>
 </div>
