@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="description" content="Counting up and down aimlessly">
     <title>0-1000-0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -30,6 +29,7 @@
     <p> - Items in array squared = 25</p>
     <p>= 1000</p>
 </div>
+        <img id="finish" class="hidden" src="finish.png">
         <div id="output"
         <?php
 $space = ' ';

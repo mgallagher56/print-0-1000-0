@@ -1,5 +1,9 @@
 html {
-    max-width: 1430px ;
+    max-width: 1430px;
+}
+
+body {
+    margin-bottom: 100px;
 }
 .normal {
     width:1430px;
@@ -23,14 +27,15 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: bottom;
     min-width:1430px;
 }
 
 #button {
     float: left;
     position: absolute;
-    left: 25%;
-    top: 20%;
+    left: 350px;
+    top: 190px;
     height: 50px;
     border-radius: 10px;
     font-size: 16px;
@@ -55,14 +60,22 @@ html {
     background-repeat: repeat;
 }
 
+.finish {
+    position: absolute;
+    top: 29530px;
+    left: 870px;
+    height: 500px;
+    transform: rotate(-15deg) skewX(-20deg);
+}
+
 #output {
     min-width:1430px;
     width: 1430px;
 }
 
 .skiing {
-    background-image: url("snow.png");
     width: 1430px;
+    background-image: url("snow.gif");
     font-size: 13px;
     background-size: auto;
     background-repeat: repeat;
@@ -90,7 +103,6 @@ html {
 
 .skier2 {
     position: absolute;
-    height: 500px;
     width: 750px;
     transform: rotate(-7deg);
     animation: rotate 1.5s infinite;
@@ -100,3 +112,14 @@ html {
     100% {transform: rotate(360deg)}
 }
 
+
+@media only screen and (max-width: 950px) {
+    .skiingbg {
+        background-position: center center;
+    }
+
+    .podium {
+        background-position: center center;
+
+    }
+}
