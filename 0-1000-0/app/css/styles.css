@@ -9,13 +9,13 @@ body {
     width:1430px;
     height: 100%;
     font-size: 13px;
-    background-image: url("greek-vase.png");
+    background-image: url("../img/greek-vase.png");
     background-size: auto;
     background-repeat: repeat;
 }
 
 .skiingbg {
-    background-image: url("mountain.jpg");
+    background-image: url("../img/mountain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 }
 
 .podium {
-    background-image: url("podium.jpg");
+    background-image: url("../img/podium.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,7 +75,7 @@ body {
 
 .skiing {
     width: 1430px;
-    background-image: url("snow.gif");
+    background-image: url("../img/snow.gif");
     font-size: 13px;
     background-size: auto;
     background-repeat: repeat;

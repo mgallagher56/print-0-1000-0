@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="description" content="Counting up and down aimlessly">
     <title>0-1000-0</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="app/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="app/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="index.js" defer></script>
+    <script src="app/js/marcSki.js"></script>
+    <script src="app/js/vader.js" defer></script>
+    <script src="app/js/cage.js" defer></script>
+    <script src="app/js/kermit.js" defer></script>
+    <script src="app/js/main.js" async></script>
 </head>
 <body class="normal">
-<audio id="audio" src="marioStart.mp3" ></audio>
-<audio id="race" src="race.mp3" ></audio>
-<audio loop id="cheer" src="cheer.m4a" ></audio>
-
+<audio id="mario" src="app/sound/marioStart.mp3" ></audio>
+<audio id="race" src="app/sound/race.mp3" ></audio>
+<audio loop id="cheer" src="app/sound/cheer.m4a" ></audio>
 
 <div class="overlay">
     <button name="play" id="button">Send Marc Skiing</button>
     <div id="layer" class="layer">
-        <img src="skier.png" id="skier" class="hidden">
-<div id="text">
+        <img src="app/img/skier.png" id="skier" class="hidden">
+        <img src="app/img/vader.png" id="vader" class="hidden">
+        <img src="app/img/cage.png" id="cage" class="hidden">
+        <img src="app/img/kermit.png" id="kermit" class="hidden">
+
+
+        <div id="text">
 <h1>Why am I doing this?</h1>
     <p>Exploded string = array(5) { [0]=> string(3) "Why" [1]=> string(2) "Am" [2]=> string(1) "I" [3]=> string(5) "Doing" [4]=> string(5) "This?" }</p>
     <p>String length = 20</p>
@@ -29,7 +37,7 @@
     <p> - Items in array squared = 25</p>
     <p>= 1000</p>
 </div>
-        <img id="finish" class="hidden" src="finish.png">
+        <img id="finish" class="hidden" src="app/img/finish.png">
         <div id="output"
         <?php
 $space = ' ';
