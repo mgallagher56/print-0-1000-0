@@ -1,27 +1,10 @@
-function setScrollTime($totalTime) {
-    setTimeout(function () {
-        $('html, body').animate({scrollTop: $(document).height()}, $totalTime, 'linear')
-    }, 4600)
-}
 function moveMarc($left, $top, $duration=3000) {
     $('#skier').animate({left: $left+'px', top: $top+'px', speed: 50000}, {
         duration: $duration,
         easing: 'linear'
     })
 }
-function switchSkiier1($timeout) {
-    setTimeout(function () {
-        document.getElementById('skier').className = 'skier'
-    }, $timeout)
-}
-function switchSkiier2($timeout) {
-    setTimeout(function () {
-        document.getElementById('skier').className = 'skierSwitch'
-    }, $timeout)
-}
-function getRandNumber($max = 3200, $min=2800) {
-    return Math.floor(Math.random() * ($max - $min + 1) ) + $min
-}
+
 let randDuration = getRandNumber()
 let randDuration1 = getRandNumber()
 let randDuration2 = getRandNumber()
@@ -34,59 +17,43 @@ let randDuration8 = getRandNumber()
 let randDuration9 = getRandNumber()
 let randDuration10 = getRandNumber()
 
-function getMarcTotalTime() {
-   return parseInt(randDuration + randDuration1 + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8 + randDuration9 + randDuration10)
-}
 
-let randTurn1 = getRandNumber(1200,1100)
-let randTurn2 = getRandNumber(-150,-50)
-let randTurn3 = getRandNumber(1200,1100)
-let randTurn4 = getRandNumber(-150,-50)
-let randTurn5 = getRandNumber(1200,1100)
-let randTurn6 = getRandNumber(-150,-50)
-let randTurn7 = getRandNumber(1200,1100)
-let randTurn8 = getRandNumber(-150,-50)
-let randTurn9 = getRandNumber(1200,1100)
-let randTurn10 = getRandNumber(-150,-50)
-
+let mswitch1 = randDuration -100
+let mswitch2 = randDuration + randDuration2-100
+let mswitch3 = randDuration + randDuration2 + randDuration3-100
+let mswitch4 = randDuration + randDuration2 + randDuration3 + randDuration4-100
+let mswitch5 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5-100
+let mswitch6 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6-100
+let mswitch7 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7-100
+let mswitch8 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8-100
+let mswitch9 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8 + randDuration9-100
+let mswitch10 = randDuration + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8 + randDuration9 + randDuration10-100
 
 function marcMove() {
     setTimeout(function () {
 
-        setTimeout(function () {
-            $("#skier").stop()
-            document.getElementById('finish').className = 'hidden'
-            document.getElementById('output').className = 'hidden'
-            document.body.className = 'podium'
-            moveMarc(400,125, 3000)
-            document.getElementById('skier').className = 'skier2'
-            document.getElementById("cheer").play();
-
-        }, 34000)
-
         moveMarc(randTurn1, 2615, randDuration)
-        switchSkiier2(2900)
+        switchSkier2(mswitch1,'skier')
         moveMarc(randTurn2, 5480, randDuration1)
-        switchSkiier1(5800)
-        moveMarc(randTurn3, 8095, randDuration2)
-        switchSkiier2(8800)
-        moveMarc(randTurn4, 10810, randDuration3)
-        switchSkiier1(11800)
-        moveMarc(randTurn5, 13625, randDuration4)
-        switchSkiier2(14800)
-        moveMarc(randTurn6,16440, randDuration5)
-        switchSkiier1(18100)
-        moveMarc(randTurn7,19255, randDuration6)
-        switchSkiier2(21100)
-        moveMarc(randTurn8,21870, randDuration7)
-        switchSkiier1(24000)
-        moveMarc(randTurn9,24685, randDuration8)
-        switchSkiier2(27000)
-        moveMarc(randTurn10,27600, randDuration9)
-        switchSkiier1(30000)
+        switchSkier1(mswitch2,'skier')
+        moveMarc(randTurn1, 8095, randDuration2)
+        switchSkier2(mswitch3,'skier')
+        moveMarc(randTurn2, 10810, randDuration3)
+        switchSkier1(mswitch4,'skier')
+        moveMarc(randTurn1, 13625, randDuration4)
+        switchSkier2(mswitch5,'skier')
+        moveMarc(randTurn2,16440, randDuration5)
+        switchSkier1(mswitch6,'skier')
+        moveMarc(randTurn1,19255, randDuration6)
+        switchSkier2(mswitch7,'skier')
+        moveMarc(randTurn2,21870, randDuration7)
+        switchSkier1(mswitch8,'skier')
+        moveMarc(randTurn1,24685, randDuration8)
+        switchSkier2(mswitch9,'skier')
+        moveMarc(randTurn2,27600, randDuration9)
+        switchSkier1(mswitch10,'skier')
         moveMarc(950,30000, randDuration10)
+        console.log()
 
-
-
-    }, 4100)
+    }, 4400)
 }

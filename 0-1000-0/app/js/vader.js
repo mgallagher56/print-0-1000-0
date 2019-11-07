@@ -4,19 +4,6 @@ function moveVader($left, $top, $duration=3000) {
         easing: 'linear'
     })
 }
-function switchSkiierV1($timeout) {
-    setTimeout(function () {
-        document.getElementById('vader').className = 'skier'
-    }, $timeout)
-}
-function switchSkiierV2($timeout) {
-    setTimeout(function () {
-        document.getElementById('vader').className = 'skierSwitch'
-    }, $timeout)
-}
-function getRandNumber($max = 3200, $min=2800) {
-    return Math.floor(Math.random() * ($max - $min + 1) ) + $min
-}
 
 let vrandDuration = getRandNumber()
 let vrandDuration1 = getRandNumber()
@@ -30,52 +17,44 @@ let vrandDuration8 = getRandNumber()
 let vrandDuration9 = getRandNumber()
 let vrandDuration10 = getRandNumber()
 
-function getVaderTotalTime() {
-    return parseInt(vrandDuration + vrandDuration1 + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9 + vrandDuration10)
-}
-
-let vrandTurn1 = getRandNumber(1200,1100)
-let vrandTurn2 = getRandNumber(-150,-50)
-let vrandTurn3 = getRandNumber(1200,1100)
-let vrandTurn4 = getRandNumber(-150,-50)
-let vrandTurn5 = getRandNumber(1200,1100)
-let vrandTurn6 = getRandNumber(-150,-50)
-let vrandTurn7 = getRandNumber(1200,1100)
-let vrandTurn8 = getRandNumber(-150,-50)
-let vrandTurn9 = getRandNumber(1200,1100)
-let vrandTurn10 = getRandNumber(-150,-50)
+let vswitch1 = vrandDuration-100
+let vswitch2 = vrandDuration + vrandDuration2-100
+let vswitch3 = vrandDuration + vrandDuration2 + vrandDuration3-100
+let vswitch4 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4-100
+let vswitch5 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5-100
+let vswitch6 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6-100
+let vswitch7 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7-100
+let vswitch8 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8-100
+let vswitch9 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9-100
+let vswitch10 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9 + vrandDuration10-100
 
 
 function vaderMove() {
     setTimeout(function () {
 
-        setTimeout(function () {
-            $("#vader").stop()
-        }, 34000)
-
-        moveVader(vrandTurn1, 2615, vrandDuration)
-        switchSkiierV2(2900)
-        moveVader(vrandTurn2, 5480, vrandDuration1)
-        switchSkiierV1(5800)
-        moveVader(vrandTurn3, 8095, vrandDuration2)
-        switchSkiierV2(8800)
-        moveVader(vrandTurn4, 10810, vrandDuration3)
-        switchSkiierV1(11800)
-        moveVader(vrandTurn5, 13625, vrandDuration4)
-        switchSkiierV2(14800)
-        moveVader(vrandTurn6,16440, vrandDuration5)
-        switchSkiierV1(18100)
-        moveVader(vrandTurn7,19255, vrandDuration6)
-        switchSkiierV2(21100)
-        moveVader(vrandTurn8,21870, vrandDuration7)
-        switchSkiierV1(24000)
-        moveVader(vrandTurn9,24685, vrandDuration8)
-        switchSkiierV2(27000)
-        moveVader(vrandTurn10,27600, vrandDuration9)
-        switchSkiierV1(30000)
+        moveVader(randTurn1, 2615, vrandDuration)
+        switchSkier2(vswitch1, 'vader')
+        moveVader(randTurn2, 5480, vrandDuration1)
+        switchSkier1(vswitch2, 'vader')
+        moveVader(randTurn1, 8095, vrandDuration2)
+        switchSkier2(vswitch3, 'vader')
+        moveVader(randTurn2, 10810, vrandDuration3)
+        switchSkier1(vswitch4, 'vader')
+        moveVader(randTurn1, 13625, vrandDuration4)
+        switchSkier2(vswitch5, 'vader')
+        moveVader(randTurn2,16440, vrandDuration5)
+        switchSkier1(vswitch6, 'vader')
+        moveVader(randTurn1,19255, vrandDuration6)
+        switchSkier2(vswitch7, 'vader')
+        moveVader(randTurn2,21870, vrandDuration7)
+        switchSkier1(vswitch8, 'vader')
+        moveVader(randTurn1,24685, vrandDuration8)
+        switchSkier2(vswitch9, 'vader')
+        moveVader(randTurn2,27600, vrandDuration9)
+        switchSkier1(vswitch10, 'vader')
         moveVader(950,30000, vrandDuration10)
 
+        console.log(randTurn2)
 
-
-    }, 4100)
+    }, 4400)
 }

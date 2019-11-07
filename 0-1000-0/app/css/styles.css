@@ -1,12 +1,83 @@
-html {
-    max-width: 1430px;
+body {
+    margin: 0 0 100px 0;
 }
 
-body {
-    margin-bottom: 100px;
+#text {
+    overflow: auto;
+}
+
+header {
+    background-color: deepskyblue;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0 0 0 50px;
+    padding: 0;
+    color: #323134;
+}
+
+header p {
+    color: #323134;
+}
+
+h2 {
+    margin-left: 20px;
+    color: whitesmoke;
+}
+
+li {
+    font-size:18px;
+    color: whitesmoke;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+.left p {
+    color: black;
+}
+
+.right p {
+    color: black;
+}
+
+.subTitle {
+    display: inline;
+    width: 30%;
+    margin-left: 55px;
+    font-size: 20px;
+}
+
+.container {
+   width:90%;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+    width: 40%;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    margin: 20px 0 20px 50px;
+}
+
+.right {
+    float: right;
+    width: 40%;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    margin: 20px 50px 20px 0;
+
 }
 .normal {
-    width:1430px;
     height: 100%;
     font-size: 13px;
     background-image: url("../img/greek-vase.png");
@@ -32,16 +103,15 @@ body {
 }
 
 #button {
-    float: left;
-    position: absolute;
-    left: 350px;
-    top: 190px;
+    float: right;
     height: 50px;
+    position: relative;
+    bottom: 42px;
+    margin: 0 50px 0 0;
     border-radius: 10px;
     font-size: 16px;
     background-color: #52D08E;
     border: 2px black solid;
-    text-decoration: blink;
     text-decoration: blink;
     -webkit-animation-name: blinker;
     -webkit-animation-duration: 0.2s;
@@ -68,10 +138,16 @@ body {
     transform: rotate(-15deg) skewX(-20deg);
 }
 
-#output {
-    min-width:1430px;
-    width: 1430px;
+#text {
+    margin:0 0 20px 0;
+    background-image: url("../img/dark.png");
 }
+
+#output {
+    min-width:1350px;
+    width: 1350px;
+}
+
 
 .skiing {
     width: 1430px;
@@ -88,24 +164,48 @@ body {
 .skier {
     display: block;
     position: absolute;
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 400px;
     transform: rotate(60deg);
 }
 
 .skierSwitch {
     display: block;
     position: absolute;
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 400px;
     transform: rotate(-60deg) scaleX(-1);
 }
 
 .skier2 {
     position: absolute;
-    width: 750px;
+    width: 900px;
     transform: rotate(-7deg);
     animation: rotate 1.5s infinite;
+}
+
+.banner {
+    height: 150px;
+    width: 100%;
+    background-color: deepskyblue;
+    animation: blinker2 0.4s infinite ease-in-out alternate;
+    position: fixed;
+    opacity: .5;
+}
+
+.banner h1 {
+    text-align: center;
+    font-size: 100px;
+    color: black;
+    margin-top: 20px;
+}
+
+@-webkit-keyframes blinker2 {
+    0% {background-color: deepskyblue}
+    25%{background-color: indianred}
+    50%{background-color: gold}
+    75%{background-color: springgreen}
+    100% {background-color: whitesmoke}
 }
 
 @keyframes rotate {
