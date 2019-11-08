@@ -35,7 +35,7 @@
         <div id="text">
             <header>
             <h1>Why Am I Doing This?</h1>
-                <p class="subTitle">An example of constructive procrastination</p>
+                <p class="subTitle">A MVP Story</p>
                 <button name="play" id="button">Send Marc Skiing</button>
             </header>
             <H2>Print the numbers 0-1000-0 (every number in between), with 1000 only once and each number on a new line in:</H2>
