@@ -1,5 +1,5 @@
-function moveVader($left, $top, $duration=3000) {
-    $('#vader').animate({left: $left+'px', top: $top+'px', speed: 50000}, {
+function moveVader($left, $top, $duration = 3000) {
+    $('#vader').animate({left: $left + 'px', top: $top + 'px', speed: 50000}, {
         duration: $duration,
         easing: 'linear'
     })
@@ -17,17 +17,16 @@ let vrandDuration8 = getRandNumber()
 let vrandDuration9 = getRandNumber()
 let vrandDuration10 = getRandNumber()
 
-let vswitch1 = vrandDuration-100
-let vswitch2 = vrandDuration + vrandDuration2-100
-let vswitch3 = vrandDuration + vrandDuration2 + vrandDuration3-100
-let vswitch4 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4-100
-let vswitch5 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5-100
-let vswitch6 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6-100
-let vswitch7 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7-100
-let vswitch8 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8-100
-let vswitch9 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9-100
-let vswitch10 = vrandDuration + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9 + vrandDuration10-100
-
+let vswitch1 = vrandDuration - 100
+let vswitch2 = vswitch1 + vrandDuration2 - 100
+let vswitch3 = vswitch2 + vrandDuration3 - 100
+let vswitch4 = vswitch3 + vrandDuration4 - 100
+let vswitch5 = vswitch4 + vrandDuration5 - 100
+let vswitch6 = vswitch5 + vrandDuration6 - 100
+let vswitch7 = vswitch6 + vrandDuration7 - 100
+let vswitch8 = vswitch7 + vrandDuration8 - 100
+let vswitch9 = vswitch8 + vrandDuration9 - 100
+let vswitch10 = vswitch9 + vrandDuration10 - 100
 
 function vaderMove() {
     setTimeout(function () {
@@ -42,19 +41,17 @@ function vaderMove() {
         switchSkier1(vswitch4, 'vader')
         moveVader(randTurn1, 13625, vrandDuration4)
         switchSkier2(vswitch5, 'vader')
-        moveVader(randTurn2,16440, vrandDuration5)
+        moveVader(randTurn2, 16440, vrandDuration5)
         switchSkier1(vswitch6, 'vader')
-        moveVader(randTurn1,19255, vrandDuration6)
+        moveVader(randTurn1, 19255, vrandDuration6)
         switchSkier2(vswitch7, 'vader')
-        moveVader(randTurn2,21870, vrandDuration7)
+        moveVader(randTurn2, 21870, vrandDuration7)
         switchSkier1(vswitch8, 'vader')
-        moveVader(randTurn1,24685, vrandDuration8)
+        moveVader(randTurn1, 24685, vrandDuration8)
         switchSkier2(vswitch9, 'vader')
-        moveVader(randTurn2,27600, vrandDuration9)
+        moveVader(randTurn2, 27600, vrandDuration9)
         switchSkier1(vswitch10, 'vader')
-        moveVader(950,30000, vrandDuration10)
-
-        console.log(randTurn2)
+        moveVader(950, 30000, vrandDuration10)
 
     }, 4400)
 }
