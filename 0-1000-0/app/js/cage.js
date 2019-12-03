@@ -3,19 +3,20 @@ function moveCage($left, $top, $duration = 3000) {
         duration: $duration,
         easing: 'linear'
     })
+
 }
 
-let crandDuration = getRandNumber()
-let crandDuration1 = getRandNumber()
-let crandDuration2 = getRandNumber()
-let crandDuration3 = getRandNumber()
-let crandDuration4 = getRandNumber()
-let crandDuration5 = getRandNumber()
-let crandDuration6 = getRandNumber()
-let crandDuration7 = getRandNumber()
-let crandDuration8 = getRandNumber()
-let crandDuration9 = getRandNumber()
-let crandDuration10 = getRandNumber()
+const crandDuration = getRandNumber()
+const crandDuration1 = getRandNumber()
+const crandDuration2 = getRandNumber()
+const crandDuration3 = getRandNumber()
+const crandDuration4 = getRandNumber()
+const crandDuration5 = getRandNumber()
+const crandDuration6 = getRandNumber()
+const crandDuration7 = getRandNumber()
+const crandDuration8 = getRandNumber()
+const crandDuration9 = getRandNumber()
+const crandDuration10 = getRandNumber()
 
 let cswitch1 = crandDuration - 100
 let cswitch2 = cswitch1 + crandDuration2 - 100

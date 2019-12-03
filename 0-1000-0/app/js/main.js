@@ -1,36 +1,37 @@
 function getRandNumber($max = 3500, $min = 3200) {
     return Math.floor(Math.random() * ($max - $min + 1)) + $min
+
 }
 
 let randTurn1 = getRandNumber(1150, 1050)
 let randTurn2 = getRandNumber(-150, -50)
 
 function switchSkier1($timeout, $characterString) {
-    setTimeout(function () {
-        document.getElementById($characterString).className = 'skier'
-    }, $timeout)
+  setTimeout(function () {
+    document.getElementById($characterString).className = 'skier'
+  }, $timeout)
 }
 
 function switchSkier2($timeout, $characterString) {
-    setTimeout(function () {
-        document.getElementById($characterString).className = 'skierSwitch'
-    }, $timeout)
+  setTimeout(function() {
+    document.getElementById($characterString).className = 'skierSwitch'
+  }, $timeout)
 }
 
 function getMarcTotalTime() {
-    return parseInt(randDuration + randDuration1 + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8 + randDuration9 + randDuration10)
+  return parseInt(randDuration + randDuration1 + randDuration2 + randDuration3 + randDuration4 + randDuration5 + randDuration6 + randDuration7 + randDuration8 + randDuration9 + randDuration10)
 }
 
 function getCageTotalTime() {
-    return parseInt(crandDuration + crandDuration1 + crandDuration2 + crandDuration3 + crandDuration4 + crandDuration5 + crandDuration6 + crandDuration7 + crandDuration8 + crandDuration9 + crandDuration10)
+  return parseInt(crandDuration + crandDuration1 + crandDuration2 + crandDuration3 + crandDuration4 + crandDuration5 + crandDuration6 + crandDuration7 + crandDuration8 + crandDuration9 + crandDuration10)
 }
 
 function getVaderTotalTime() {
-    return parseInt(vrandDuration + vrandDuration1 + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9 + vrandDuration10)
+  return parseInt(vrandDuration + vrandDuration1 + vrandDuration2 + vrandDuration3 + vrandDuration4 + vrandDuration5 + vrandDuration6 + vrandDuration7 + vrandDuration8 + vrandDuration9 + vrandDuration10)
 }
 
 function getKermitTotalTime() {
-    return parseInt(krandDuration + krandDuration1 + krandDuration2 + krandDuration3 + krandDuration4 + krandDuration5 + krandDuration6 + krandDuration7 + krandDuration8 + krandDuration9 + krandDuration10)
+  return parseInt(krandDuration + krandDuration1 + krandDuration2 + krandDuration3 + krandDuration4 + krandDuration5 + krandDuration6 + krandDuration7 + krandDuration8 + krandDuration9 + krandDuration10)
 }
 
 document.getElementById('button').addEventListener('click', function (e) {
@@ -121,3 +122,15 @@ document.getElementById('button').addEventListener('click', function (e) {
     kermitMove()
 })
 
+  function setScrollTime($totalTime) {
+    setTimeout(function() {
+      $('html, body').animate({
+        scrollTop: $(document).height()
+      }, $totalTime, 'linear')
+    }, 4600)
+  }
+  setScrollTime(totalScrollTime)
+  marcMove()
+  vaderMove()
+  cageMove()
+  kermitMove()
